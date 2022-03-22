@@ -1,0 +1,40 @@
+{
+    "name": "js-design-patterns",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "lint": "eslint packages",
+        "lint:fix": "eslint packages --fix",
+        "prepare": "husky install",
+        "format:check": "prettier packages --check",
+        "format:write": "prettier packages --write"
+    },
+    "keywords": [
+        "design patterns",
+        "Javascript",
+        "NodeJS"
+    ],
+    "author": "Raul Soledispa",
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^8.11.0",
+        "eslint-config-prettier": "^8.5.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.7",
+        "prettier": "^2.6.0",
+        "tap": "^16.0.0"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
+}
