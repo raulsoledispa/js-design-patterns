@@ -12,24 +12,6 @@ export default class Builder {
 
     /**
      *
-     * @param {string} username
-     */
-    setUsername(username) {
-        this.username = username;
-        return this;
-    }
-
-    /**
-     *
-     * @param {string} password
-     */
-    setPassword(password) {
-        this.password = password;
-        return this;
-    }
-
-    /**
-     *
      * @param {string}  path
      */
     setPath(path) {
