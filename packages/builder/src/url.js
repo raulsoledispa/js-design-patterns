@@ -20,7 +20,9 @@ export default class Url {
     }
 
     validate() {
-        if (!this.hostname && (!this.host || this.port) && this.protocol) {
+        console.log(this.host);
+        console.log(this.port);
+        if (!this.protocol || (!this.hostname && !this.host && !this.port)) {
             throw new Error(
                 "Must specify at least a protocol, hostname or host and port"
             );
@@ -29,7 +31,7 @@ export default class Url {
 
     toString() {
         const queryParameters = this.parameters ? `?${this.parameters}` : "";
-        const uri = this.hostname ?? `${this.host}:${this.port}`;
-        return `${this.protocol}://${uri}${this.path}${queryParameters}`;
+        const url = this.hostname ?? `${this.host}:${this.port}`;
+        return `${this.protocol}://${url}${this.path}${queryParameters}`;
     }
 }
