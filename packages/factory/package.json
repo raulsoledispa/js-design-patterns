@@ -1,0 +1,22 @@
+{
+    "name": "factory",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "devDependencies": {},
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "tap test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/raulsoledispa/js-design-patterns.git"
+    },
+    "author": "Raul Soledispa",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/raulsoledispa/js-design-patterns/issues"
+    },
+    "homepage": "https://github.com/raulsoledispa/js-design-patterns#readme"
+}
