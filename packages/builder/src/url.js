@@ -31,7 +31,7 @@ export default class Url {
 
     toString() {
         const queryParameters = this.parameters ? `?${this.parameters}` : "";
-        const url = this.hostname ?? `${this.host}:${this.port}`;
-        return `${this.protocol}://${url}${this.path}${queryParameters}`;
+        const ref = this.hostname ?? `${this.host}:${this.port}`;
+        return `${this.protocol}://${ref}${this.path}${queryParameters}`;
     }
 }
