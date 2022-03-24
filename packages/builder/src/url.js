@@ -20,8 +20,6 @@ export default class Url {
     }
 
     validate() {
-        console.log(this.host);
-        console.log(this.port);
         if (!this.protocol || (!this.hostname && !this.host && !this.port)) {
             throw new Error(
                 "Must specify at least a protocol, hostname or host and port"
